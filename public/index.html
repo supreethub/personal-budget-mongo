@@ -128,23 +128,11 @@
         var dataSource = {
             datasets: [
                 {
-                    data: [400,100,20],
-                    backgroundColor: [
-                        '#90EE90',
-                        '#ff6384',
-                        '#36a2eb',
-                        '#fd6b19',
-                        '#F5DEB3',
-                        '#5F9EA0',
-                        '#00FFFF',
-                    ],
+                    data: [],
+                    backgroundColor: [],
                 }
             ],
-            labels: [
-                'Rent',
-                'Groceries',
-                'Netflix'
-            ]
+            labels: []
         };
 
         function createChart() {
@@ -164,7 +152,8 @@
                 
                 for(var i = 0; i < res.data.length; i++) {
                     dataSource.datasets[0].data[i] = res.data[i].budget;
-                    dataSource.labels[i] = res.data[i].title;   
+                    dataSource.labels[i] = res.data[i].title;
+                    dataSource.datasets[0].backgroundColor[i] = res.data[i].color;  
 
                     var obj = new Object();
                     obj.value = res.data[i].budget;
@@ -251,8 +240,8 @@ for (var i = 0; i< dataD3.length; i++)
 }
 
 var color = d3.scale.ordinal()
-	.domain([list])
-	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+	.domain(list)
+	.range(dataSource.datasets[0].backgroundColor);
 
 
 

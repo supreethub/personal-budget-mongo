@@ -4,13 +4,17 @@ const pbSchema = new mongoose.Schema({
     budget: {
         type: Number,
         required: true,
-        unique: true
+        
     },
     title: {
         type: String,
         trim: true,
         required: true,
         uppercase: true
+    },
+    color: {
+        type: String,
+        required: true,
     }
 }, {collection: 'personal_budget'})
 
