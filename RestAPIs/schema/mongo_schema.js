@@ -15,6 +15,8 @@ const pbSchema = new mongoose.Schema({
     color: {
         type: String,
         required: true,
+        minlength: 7,  //7 characters including # for color codes
+        maxlength: 7   //7 characters including # for color codes
     }
 }, {collection: 'personal_budget'})
 
