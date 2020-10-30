@@ -28,34 +28,3 @@ app.use(function(req, res) {
   app.listen(port);
   console.log('Personal Budget API running on: ' + port);
 
-
-// app.get('/movedData.json', (req, res) => {
-
-//     mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
-//         .then(() => {
-//                 console.log(`API listening at http://localhost:${port}`);
-//                 console.log("Connected to Personal Budget Database");
-//                 pbModel.find({})
-//                     .then((data) => {
-//                         res.json({"personal_budget": data});
-//                     })
-//                     .catch((ConnectionErr) => {
-//                         console.log(ConnectionErr);
-
-//                     })
-//                 //mongoose.connection.close();
-//             })
-//             .catch((connectionErr) => {
-//                 console.log(connectionErr);
-//                // mongoose.connection.close();
-//             })
-
-// });
-
-// app.get('/budget', (req,res) => {
-//     res.json(movedData)
-// });
-
-// app.listen(port, () => {
-//     console.log(`API listening at http://localhost:${port}`);
-// });
